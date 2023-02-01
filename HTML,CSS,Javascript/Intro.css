@@ -1,0 +1,86 @@
+/* 3 ways to include css in html:
+1).Inline--<tagName style="property:value">
+2).External
+3).Internal */
+a,h3{
+    color:darkgreen;
+}
+/* Types of Selectors:
+1). type selector 
+2). class selector-->class="classname"
+.classname{
+    property:value;
+}
+3).id selector-->id="idname"
+#idname{
+}
+4).attribute selectors--> <a href="sdft.com">
+a[href="abc.com"]{
+    property:value;
+}
+5).pseudo class selector
+-->hover means when we point cursor to any text it changes its colour
+-->visited when url changes its state
+selector:pseudo class{
+    property:value;
+ }
+ 6). pseudo element selector-->selects a part of the element as follows: */
+ p::first-letter{
+    color:lightseagreen;
+ }
+ /*
+ 7). combinator selectors-->selects element with its child like
+ eg-
+ article > p{
+    property:value;
+ }
+ 8).universal selectors-->used to select everything like
+ *{
+ }
+ */
+li{
+    list-style-type:armenian;
+}
+.special{
+    color:brown;
+    font-weight:900;
+}
+span.special{
+    color:cornflowerblue;
+}
+  ul li{
+    list-style-type: decimal;
+}
+/*adjacent selector*/
+h6+p{
+    color:chartreuse;
+}
+a:hover{
+    color:darkred;
+    text-decoration: wavy;
+}
+#head{
+    background-color: chartreuse;
+}
+li.c{
+    color: darkgoldenrod;
+    background-color: darkblue;
+    font-size: x-large;
+}
+*{
+    color:mediumvioletred;
+}
+ h6{
+    color:rgba(red, green, rgb(64, 191, 230), alpha);
+}
+p{
+    text-shadow: 4px 3px 2px rgb(40, 212, 115),
+    2px 2px 1px rgb(71, 217, 225);
+    text-align: center;
+    border-color: blueviolet;
+    font-size: larger;
+    font-style: italic;
+    font-weight:bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
