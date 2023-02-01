@@ -40,9 +40,36 @@ console.log(typeof p)
 //Objects:Non-primitive data type
 const item = {
     "Chahak": true,
-    "Dhwani": false,
+    "Dhwani": false,  //not mandatory to write keys in double quotes
     "Lovish": 56,
     "Neetu": undefined
 }
 console.log(item["Chahak"])
 console.log(item) //printing complete list of key-value pair
+//we can change the attributes inside const object but not  the type data stored by cons variable like:
+const a1 = {
+    name: "Chahak",
+    age: 19,
+    section: "A"
+}
+//a1=45 //error
+a1['rollno'] = 12
+a1['rollnoreverse'] = 21
+console.log(a1)
+console.log(a1.name)   //Another  way of accessing keys
+
+//Expressions and conditions
+"Chahak Jain"  //valid expression
+let b1 = 45
+let b2 = 4
+console.log("b1+b2: ", b1 + b2)
+console.log("b1*b2: ", b1 * b2)
+console.log("b1/b2: ", b1 / b2)
+console.log("b1-b2: ", b1 - b2)
+console.log("b1**b2: ", b1 ** b2)
+console.log("b1%b2: ", b1 % b2)
+console.log("b1++: ", b1++)
+console.log("b1--: ", b1--)
+//comparison operators
+//===: equal value and type
+//!==: not equal value and type
