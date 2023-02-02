@@ -17,8 +17,8 @@ console.log(b)
 console.log(a)
 console.log(b) //global scoped
 
-// let x=12 (Repeat declaration not allowed with let  but allowed with var)
-// let x=5  (let can be updated but not redeclared)
+//let x=12 (Repeat declaration not allowed with let  but allowed with var)
+//x=5  (let can be updated but not redeclared)
 //const can neither be updated nor redeclared
 //var variable are initialised with undefined whereas let and const variable are not initialised
 const e = "Happy"
@@ -73,3 +73,63 @@ console.log("b1--: ", b1--)
 //comparison operators
 //===: equal value and type
 //!==: not equal value and type
+
+//Conditional statements
+const prompt = require("prompt-sync")();  //npm install prompt-sync in VS code
+let pro = prompt("Hey what's your age?")  //always accepts string
+console.log(typeof pro)
+console.log(pro)   //prints the input taken by prompt
+//typecasting:converting string into another data type
+pro = Number.parseInt(pro)
+console.log(typeof pro)
+// const alert=require("alert-sync")();
+// if (a > 0) {
+//     alert("This is a valid age")
+// }
+
+//switch statement in javascript
+let day;
+switch (new Date().getDay()) {  //It takes day number between 0 to 6
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+}
+console.log(day)
+
+//loops
+for (let i = 0; i < 30; i++) {
+    console.log(i);
+}
+
+let marks = {
+    harry: 12,
+    chahak: 89,
+    dhwani: 90
+}
+console.log(marks)
+//for in loop
+for (let a in marks){
+    console.log(a,":",marks[a]) //accesing keys of object created
+}
+//for of loop
+for(let b of "Chahak")
+{
+    console.log(b)
+}
