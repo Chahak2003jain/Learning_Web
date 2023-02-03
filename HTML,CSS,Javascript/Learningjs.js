@@ -117,7 +117,6 @@ console.log(day)
 for (let i = 0; i < 30; i++) {
     console.log(i);
 }
-
 let marks = {
     harry: 12,
     chahak: 89,
@@ -125,11 +124,73 @@ let marks = {
 }
 console.log(marks)
 //for in loop
-for (let a in marks){
-    console.log(a,":",marks[a]) //accesing keys of object created
+for (let a in marks) {
+    console.log(a, ":", marks[a]) //accesing keys of object created
 }
+console.log("Length of object: ", Object.keys(marks).length) //print total no. of keys in an object marks
 //for of loop
-for(let b of "Chahak")
-{
+for (let b of "Chahak") {
     console.log(b)
 }
+
+//functions
+function onePlusAvg(x, y)    //creating function
+{
+    return 1 + (x + y) / 2;
+}
+console.log("After calling the function:", onePlusAvg(2, 2))
+//arrow function--another way of writing a function
+const sum = (p, q) => {
+    return p + q
+}
+console.log("Sum: ", sum(3, 3));
+
+//Strings
+let name = "Chahak";
+console.log(name.length);   //returns length of string--works like character array
+//template literals--use backticks
+let girl1 = "Heena"
+let girl2 = "Sheena"
+let sentence = `${girl1} is a friend of ${girl2}`
+console.log(sentence)
+//When we insert variable directly in template literal, it is known as string interpolation
+//Escapesequence characters
+let fruit = 'Ban\'ana'
+console.log(fruit)
+//string methods
+console.log(name.toUpperCase())
+console.log(name.toLowerCase())
+console.log(name.slice(2, 4))
+console.log(name.slice(2))
+console.log(name.replace("Cha", "Ma"))
+console.log(name.concat(" Jain"))
+console.log(name.trim())
+
+//Arrays
+let arr = [1, 2, 3, 34, 4, 9]
+console.log(typeof arr) //Array is a type of object
+//Array methods
+let brr = arr.toString() //brr is now a string
+console.log(brr)
+console.log(arr.join("_"))  //works as connector
+console.log(typeof brr)
+console.log(arr.pop())  //changes the original array and returns the  popped element
+console.log(arr.push(56))  //push returns the new array length
+console.log(arr)
+console.log(arr.shift(), arr)  //shift removes the first element and returns it
+console.log(arr.unshift(12), arr)  //it adds the element at first and returns new array length
+delete arr[0]
+console.log(arr, arr.length)   //array length is not affected after deletion
+let arr2 = [7, 8, 9, 10]
+console.log(arr.concat(arr2), arr)  //original array is not affected
+let bro = [0, 0, 0,-1]
+console.log(arr.concat(bro, arr2))  //can concat more than one array together at a time
+bro.sort()   //change the original array
+console.log(bro)
+let compare=(a,b)=>{
+    return b-a
+}
+bro.sort(compare)  //sorting in descending order using a function
+console.log(bro)
+bro.reverse()
+console.log(bro)
