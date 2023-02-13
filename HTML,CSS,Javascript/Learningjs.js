@@ -183,14 +183,41 @@ delete arr[0]
 console.log(arr, arr.length)   //array length is not affected after deletion
 let arr2 = [7, 8, 9, 10]
 console.log(arr.concat(arr2), arr)  //original array is not affected
-let bro = [0, 0, 0,-1]
+let bro = [0, 0, 0, -1]
 console.log(arr.concat(bro, arr2))  //can concat more than one array together at a time
 bro.sort()   //change the original array
 console.log(bro)
-let compare=(a,b)=>{
-    return b-a
+let compare = (a, b) => {
+    return b - a
 }
 bro.sort(compare)  //sorting in descending order using a function
 console.log(bro)
 bro.reverse()
 console.log(bro)
+//splicing and slicing
+let arra = [4, 5, 6, 7, 8, 9]
+let dvalues = arra.splice(2, 3, 11, 12, 13)
+console.log(arra)
+console.log(dvalues)   //prints deleted elements
+console.log(arra.slice(2, 5))   //creates new array, does not modify the original one
+//Looping through arrays
+for (let i = 0; i < arra.length; i++) {
+    console.log(arra[i]);
+}
+//forEach Loop
+arra.forEach((element) => {   //forEach can be used to access each element of array
+    console.log(element * element);
+})
+//Array.from -> used to create an array from any other object
+let name1 = 'Chahak'
+let ar = Array.from(name1)
+console.log(ar)
+//for...of---to access the elements of array
+for (let ij of arra) {
+    console.log(ij);
+}
+//for..in
+for (let h in arra) {
+    console.log(h); //prints keys
+    console.log(arra[h])  //prints the elements
+}
